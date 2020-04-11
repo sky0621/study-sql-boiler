@@ -1,0 +1,9 @@
+[psql]
+  host      = "localhost"
+  port      = 11311
+  sslmode   = "disable"
+  schema    = "public"
+  dbname    = "dvdrental"
+  user      = "postgres"
+  pass      = "localpass"
+  blacklist = ["actor_info", "customer_list", "film_list", "nicer_but_slower_film_list", "sales_by_film_category", "sales_by_store", "staff_list"]
