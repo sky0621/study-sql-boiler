@@ -1,0 +1,8 @@
+[psql]
+  host      = "localhost"
+  port      = 11411
+  sslmode   = "disable"
+  schema    = "public"
+  dbname    = "sqlboilerexample"
+  user      = "postgres"
+  pass      = "localpass"
