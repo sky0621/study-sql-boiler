@@ -4,11 +4,13 @@
 package models
 
 var TableNames = struct {
+	EventOne       string
 	Jets           string
 	Languages      string
 	PilotLanguages string
 	Pilots         string
 }{
+	EventOne:       "event_one",
 	Jets:           "jets",
 	Languages:      "languages",
 	PilotLanguages: "pilot_languages",

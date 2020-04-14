@@ -33,3 +33,11 @@ CREATE TABLE pilot_languages (
 ALTER TABLE pilot_languages ADD CONSTRAINT pilot_language_pkey PRIMARY KEY (pilot_id, language_id);
 ALTER TABLE pilot_languages ADD CONSTRAINT pilot_language_pilots_fkey FOREIGN KEY (pilot_id) REFERENCES pilots(id);
 ALTER TABLE pilot_languages ADD CONSTRAINT pilot_language_languages_fkey FOREIGN KEY (language_id) REFERENCES languages(id);
+
+CREATE TYPE workday AS ENUM('monday', 'tuesday', 'wednesday', 'thursday', 'friday');
+
+CREATE TABLE event_one (
+                           id     serial PRIMARY KEY NOT NULL,
+                           name   VARCHAR(255),
+                           day    workday NOT NULL
+);

@@ -12,72 +12,85 @@ import "testing"
 // It does NOT run each operation group in parallel.
 // Separating the tests thusly grants avoidance of Postgres deadlocks.
 func TestParent(t *testing.T) {
+	t.Run("EventOnes", testEventOnes)
 	t.Run("Jets", testJets)
 	t.Run("Languages", testLanguages)
 	t.Run("Pilots", testPilots)
 }
 
 func TestDelete(t *testing.T) {
+	t.Run("EventOnes", testEventOnesDelete)
 	t.Run("Jets", testJetsDelete)
 	t.Run("Languages", testLanguagesDelete)
 	t.Run("Pilots", testPilotsDelete)
 }
 
 func TestQueryDeleteAll(t *testing.T) {
+	t.Run("EventOnes", testEventOnesQueryDeleteAll)
 	t.Run("Jets", testJetsQueryDeleteAll)
 	t.Run("Languages", testLanguagesQueryDeleteAll)
 	t.Run("Pilots", testPilotsQueryDeleteAll)
 }
 
 func TestSliceDeleteAll(t *testing.T) {
+	t.Run("EventOnes", testEventOnesSliceDeleteAll)
 	t.Run("Jets", testJetsSliceDeleteAll)
 	t.Run("Languages", testLanguagesSliceDeleteAll)
 	t.Run("Pilots", testPilotsSliceDeleteAll)
 }
 
 func TestExists(t *testing.T) {
+	t.Run("EventOnes", testEventOnesExists)
 	t.Run("Jets", testJetsExists)
 	t.Run("Languages", testLanguagesExists)
 	t.Run("Pilots", testPilotsExists)
 }
 
 func TestFind(t *testing.T) {
+	t.Run("EventOnes", testEventOnesFind)
 	t.Run("Jets", testJetsFind)
 	t.Run("Languages", testLanguagesFind)
 	t.Run("Pilots", testPilotsFind)
 }
 
 func TestBind(t *testing.T) {
+	t.Run("EventOnes", testEventOnesBind)
 	t.Run("Jets", testJetsBind)
 	t.Run("Languages", testLanguagesBind)
 	t.Run("Pilots", testPilotsBind)
 }
 
 func TestOne(t *testing.T) {
+	t.Run("EventOnes", testEventOnesOne)
 	t.Run("Jets", testJetsOne)
 	t.Run("Languages", testLanguagesOne)
 	t.Run("Pilots", testPilotsOne)
 }
 
 func TestAll(t *testing.T) {
+	t.Run("EventOnes", testEventOnesAll)
 	t.Run("Jets", testJetsAll)
 	t.Run("Languages", testLanguagesAll)
 	t.Run("Pilots", testPilotsAll)
 }
 
 func TestCount(t *testing.T) {
+	t.Run("EventOnes", testEventOnesCount)
 	t.Run("Jets", testJetsCount)
 	t.Run("Languages", testLanguagesCount)
 	t.Run("Pilots", testPilotsCount)
 }
 
 func TestHooks(t *testing.T) {
+	t.Run("EventOnes", testEventOnesHooks)
 	t.Run("Jets", testJetsHooks)
 	t.Run("Languages", testLanguagesHooks)
 	t.Run("Pilots", testPilotsHooks)
 }
 
 func TestInsert(t *testing.T) {
+	t.Run("EventOnes", testEventOnesInsert)
+	t.Run("EventOnes", testEventOnesInsertWhitelist)
 	t.Run("Jets", testJetsInsert)
 	t.Run("Jets", testJetsInsertWhitelist)
 	t.Run("Languages", testLanguagesInsert)
@@ -145,30 +158,35 @@ func TestToManyRemove(t *testing.T) {
 }
 
 func TestReload(t *testing.T) {
+	t.Run("EventOnes", testEventOnesReload)
 	t.Run("Jets", testJetsReload)
 	t.Run("Languages", testLanguagesReload)
 	t.Run("Pilots", testPilotsReload)
 }
 
 func TestReloadAll(t *testing.T) {
+	t.Run("EventOnes", testEventOnesReloadAll)
 	t.Run("Jets", testJetsReloadAll)
 	t.Run("Languages", testLanguagesReloadAll)
 	t.Run("Pilots", testPilotsReloadAll)
 }
 
 func TestSelect(t *testing.T) {
+	t.Run("EventOnes", testEventOnesSelect)
 	t.Run("Jets", testJetsSelect)
 	t.Run("Languages", testLanguagesSelect)
 	t.Run("Pilots", testPilotsSelect)
 }
 
 func TestUpdate(t *testing.T) {
+	t.Run("EventOnes", testEventOnesUpdate)
 	t.Run("Jets", testJetsUpdate)
 	t.Run("Languages", testLanguagesUpdate)
 	t.Run("Pilots", testPilotsUpdate)
 }
 
 func TestSliceUpdateAll(t *testing.T) {
+	t.Run("EventOnes", testEventOnesSliceUpdateAll)
 	t.Run("Jets", testJetsSliceUpdateAll)
 	t.Run("Languages", testLanguagesSliceUpdateAll)
 	t.Run("Pilots", testPilotsSliceUpdateAll)

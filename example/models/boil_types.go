@@ -50,3 +50,12 @@ func makeCacheKey(cols boil.Columns, nzDefaults []string) string {
 	strmangle.PutBuffer(buf)
 	return str
 }
+
+// Enum values for workday
+const (
+	WorkdayMonday    = "monday"
+	WorkdayTuesday   = "tuesday"
+	WorkdayWednesday = "wednesday"
+	WorkdayThursday  = "thursday"
+	WorkdayFriday    = "friday"
+)
